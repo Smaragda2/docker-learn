@@ -18,6 +18,8 @@ jobs:
       - name: Deploy to Elastic Beanstalk
         uses: einaregilsson/beanstalk-deploy@v18
         with:
+          aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
+          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           application_name: Docker-Course
           environment_name: Docker-Course-env
           existing_bucket_name: elasticbeanstalk-us-east-2-767828742387
